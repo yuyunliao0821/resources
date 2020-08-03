@@ -127,6 +127,32 @@ with open("moe.json", encoding="utf-8") as f:
 使用原始資料，未處理：[`g0v/moedict-data/dict-revised.json`](https://github.com/g0v/moedict-data/blob/master/dict-revised.json)
 
 
+### 萌典詞條 <資料名稱>
+
+- Retrieved: 2020-02-26
+- 教育部萌典詞條
+- [`/LOPERs/廖永賦/moe_dict/moe_lexical_items.json`](https://drive.google.com/file/d/1T_WJcWcaYVPhFWqIdAfup30-bauzxXVa)(2MB)
+
+#### 資料格式
+
+JSON array:
+
+```json
+["⺔", "⼁", "㑳", "㑳憋憋", "㑳擾", "㑿", "㒓", "㓦", "㓦劃", ...]
+```
+
+#### 資料讀取
+
+```python
+import json
+with open("moe_lexical_items.json", encoding="utf-8") as f:
+    words = json.load(f)
+```
+
+#### 資料來源與處理簡述
+
+由 [g0v/moedict-data](https://github.com/g0v/moedict-data/blob/master/dict-revised.json) 取得原始字典檔資料 (`dict-revised.json`)，抽取每個項目的詞條 (`title`)
+
 
 詞向量
 ------------------------------
